@@ -1,0 +1,183 @@
+<?xml version='1.0' encoding='utf-8'?>
+<mxfile host="app.diagrams.net" modified="2026-11-20T00:00:00.000Z" agent="TaskFlow Phase 2" version="24.7.17" type="device">
+  <diagram id="06_Create_Task_Activity" name="06_Create_Task_Activity">
+    <mxGraphModel dx="1600" dy="900" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="891" pageHeight="1067" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="title" value="TaskFlow | UML activity: create task (UC-5)" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;fontFamily=Arial;fontSize=18;fontStyle=1;" vertex="1" parent="1">
+          <mxGeometry x="36" y="0" width="799" height="34" as="geometry" />
+        </mxCell>
+        <mxCell id="n_0" value="" style="ellipse;whiteSpace=wrap;html=1;fillColor=#172b4d;strokeColor=#172b4d;strokeWidth=1.5;fontFamily=Arial;fontSize=12;align=center;verticalAlign=middle;spacing=6;" vertex="1" parent="1">
+          <mxGeometry x="547.0" y="75.8" width="22" height="22" as="geometry" />
+        </mxCell>
+        <mxCell id="n_1" value="Authenticated user opens Add New Task" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#edf5ff;strokeColor=#4770a0;strokeWidth=1.5;fontFamily=Arial;fontSize=12;align=center;verticalAlign=middle;spacing=6;" vertex="1" parent="1">
+          <mxGeometry x="405.0" y="144.7" width="306.0" height="52.2" as="geometry" />
+        </mxCell>
+        <mxCell id="n_2" value="Enter title, category, deadline;&lt;br&gt;optional description, priority, status" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#edf5ff;strokeColor=#4770a0;strokeWidth=1.5;fontFamily=Arial;fontSize=12;align=center;verticalAlign=middle;spacing=6;" vertex="1" parent="1">
+          <mxGeometry x="426.8" y="244.8" width="262.5" height="52.2" as="geometry" />
+        </mxCell>
+        <mxCell id="n_3" value="Submit?" style="rhombus;whiteSpace=wrap;html=1;fillColor=#fff3d8;strokeColor=#4770a0;strokeWidth=1.5;fontFamily=Arial;fontSize=12;align=center;verticalAlign=middle;spacing=6;" vertex="1" parent="1">
+          <mxGeometry x="355.5" y="344.8" width="138.1" height="52.2" as="geometry" />
+        </mxCell>
+        <mxCell id="n_4" value="Close form; save nothing" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#edf5ff;strokeColor=#4770a0;strokeWidth=1.5;fontFamily=Arial;fontSize=12;align=center;verticalAlign=middle;spacing=6;" vertex="1" parent="1">
+          <mxGeometry x="36.0" y="533.3" width="197.2" height="52.2" as="geometry" />
+        </mxCell>
+        <mxCell id="n_5" value="Server checks session and owner context" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#edf5ff;strokeColor=#4770a0;strokeWidth=1.5;fontFamily=Arial;fontSize=12;align=center;verticalAlign=middle;spacing=6;" vertex="1" parent="1">
+          <mxGeometry x="268.7" y="458.0" width="311.7" height="52.2" as="geometry" />
+        </mxCell>
+        <mxCell id="n_6" value="Authorized and valid?" style="rhombus;whiteSpace=wrap;html=1;fillColor=#fff3d8;strokeColor=#4770a0;strokeWidth=1.5;fontFamily=Arial;fontSize=12;align=center;verticalAlign=middle;spacing=6;" vertex="1" parent="1">
+          <mxGeometry x="276.6" y="608.8" width="295.9" height="52.2" as="geometry" />
+        </mxCell>
+        <mxCell id="n_7" value="Show errors; preserve entered values" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffe9e7;strokeColor=#4770a0;strokeWidth=1.5;fontFamily=Arial;fontSize=12;align=center;verticalAlign=middle;spacing=6;" vertex="1" parent="1">
+          <mxGeometry x="550.1" y="721.8" width="285.6" height="52.2" as="geometry" />
+        </mxCell>
+        <mxCell id="n_8" value="Redirect to Login; save nothing" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffe9e7;strokeColor=#4770a0;strokeWidth=1.5;fontFamily=Arial;fontSize=12;align=center;verticalAlign=middle;spacing=6;" vertex="1" parent="1">
+          <mxGeometry x="125.2" y="797.3" width="239.3" height="52.2" as="geometry" />
+        </mxCell>
+        <mxCell id="n_9" value="Create task for session user;&lt;br&gt;record creation date" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#edf5ff;strokeColor=#4770a0;strokeWidth=1.5;fontFamily=Arial;fontSize=12;align=center;verticalAlign=middle;spacing=6;" vertex="1" parent="1">
+          <mxGeometry x="289.7" y="721.8" width="223.3" height="52.2" as="geometry" />
+        </mxCell>
+        <mxCell id="n_10" value="Show updated private task list" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#edf5ff;strokeColor=#4770a0;strokeWidth=1.5;fontFamily=Arial;fontSize=12;align=center;verticalAlign=middle;spacing=6;" vertex="1" parent="1">
+          <mxGeometry x="285.4" y="872.7" width="232.0" height="52.2" as="geometry" />
+        </mxCell>
+        <mxCell id="n_11" value="" style="shape=doubleEllipse;whiteSpace=wrap;html=1;fillColor=#172b4d;strokeColor=#172b4d;strokeWidth=1.5;fontFamily=Arial;fontSize=12;align=center;verticalAlign=middle;spacing=6;" vertex="1" parent="1">
+          <mxGeometry x="210.7" y="972.7" width="39.1" height="39.1" as="geometry" />
+        </mxCell>
+        <mxCell id="e_0" value="" style="curved=1;html=1;rounded=0;strokeColor=#527398;strokeWidth=1.4;endArrow=block;endFill=1;fontFamily=Arial;fontSize=10;labelBackgroundColor=#ffffff;" edge="1" parent="1" source="n_0" target="n_1">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="558.0" y="105.5" />
+              <mxPoint x="558.0" y="117.5" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e_1" value="" style="curved=1;html=1;rounded=0;strokeColor=#527398;strokeWidth=1.4;endArrow=block;endFill=1;fontFamily=Arial;fontSize=10;labelBackgroundColor=#ffffff;" edge="1" parent="1" source="n_1" target="n_2">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="558.0" y="207.1" />
+              <mxPoint x="558.0" y="218.6" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e_2" value="" style="curved=1;html=1;rounded=0;strokeColor=#527398;strokeWidth=1.4;endArrow=block;endFill=1;fontFamily=Arial;fontSize=10;labelBackgroundColor=#ffffff;" edge="1" parent="1" source="n_2" target="n_3">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="503.9" y="311.8" />
+              <mxPoint x="479.1" y="329.8" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e_3" value="[cancel]" style="curved=1;html=1;rounded=0;strokeColor=#527398;strokeWidth=1.4;endArrow=block;endFill=1;fontFamily=Arial;fontSize=10;labelBackgroundColor=#ffffff;" edge="1" parent="1" source="n_3" target="n_4">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="356.5" y="400.3" />
+              <mxPoint x="297.2" y="427.1" />
+              <mxPoint x="250.6" y="457.9" />
+              <mxPoint x="221.7" y="477.1" />
+              <mxPoint x="192.2" y="502.6" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e_4" value="[submit]" style="curved=1;html=1;rounded=0;strokeColor=#527398;strokeWidth=1.4;endArrow=block;endFill=1;fontFamily=Arial;fontSize=10;labelBackgroundColor=#ffffff;" edge="1" parent="1" source="n_3" target="n_5">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="424.6" y="410.8" />
+              <mxPoint x="424.6" y="427.6" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e_5" value="" style="curved=1;html=1;rounded=0;strokeColor=#527398;strokeWidth=1.4;endArrow=block;endFill=1;fontFamily=Arial;fontSize=10;labelBackgroundColor=#ffffff;" edge="1" parent="1" source="n_4" target="n_11">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="112.5" y="611.6" />
+              <mxPoint x="98.3" y="652.7" />
+              <mxPoint x="98.3" y="689.9" />
+              <mxPoint x="98.3" y="689.9" />
+              <mxPoint x="98.3" y="689.9" />
+              <mxPoint x="98.3" y="900.2" />
+              <mxPoint x="98.3" y="948.0" />
+              <mxPoint x="158.0" y="972.5" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e_6" value="" style="curved=1;html=1;rounded=0;strokeColor=#527398;strokeWidth=1.4;endArrow=block;endFill=1;fontFamily=Arial;fontSize=10;labelBackgroundColor=#ffffff;" edge="1" parent="1" source="n_5" target="n_6">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="424.6" y="533.5" />
+              <mxPoint x="424.6" y="567.6" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e_7" value="[validation error]" style="curved=1;html=1;rounded=0;strokeColor=#527398;strokeWidth=1.4;endArrow=block;endFill=1;fontFamily=Arial;fontSize=10;labelBackgroundColor=#ffffff;" edge="1" parent="1" source="n_6" target="n_7">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="482.9" y="668.3" />
+              <mxPoint x="516.8" y="685.8" />
+              <mxPoint x="547.8" y="698.6" />
+              <mxPoint x="563.5" y="705.2" />
+              <mxPoint x="580.4" y="711.4" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e_8" value="[session invalid / denied]" style="curved=1;html=1;rounded=0;strokeColor=#527398;strokeWidth=1.4;endArrow=block;endFill=1;fontFamily=Arial;fontSize=10;labelBackgroundColor=#ffffff;" edge="1" parent="1" source="n_6" target="n_8">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="301.5" y="650.9" />
+              <mxPoint x="275.4" y="663.1" />
+              <mxPoint x="257.9" y="684.1" />
+              <mxPoint x="235.5" y="711.1" />
+              <mxPoint x="234.4" y="751.9" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e_9" value="[yes]" style="curved=1;html=1;rounded=0;strokeColor=#527398;strokeWidth=1.4;endArrow=block;endFill=1;fontFamily=Arial;fontSize=10;labelBackgroundColor=#ffffff;" edge="1" parent="1" source="n_6" target="n_9">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="416.7" y="673.9" />
+              <mxPoint x="413.0" y="691.5" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e_10" value="[correct]" style="curved=1;html=1;rounded=0;strokeColor=#527398;strokeWidth=1.4;endArrow=block;endFill=1;fontFamily=Arial;fontSize=10;labelBackgroundColor=#ffffff;" edge="1" parent="1" source="n_7" target="n_2">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="679.8" y="699.6" />
+              <mxPoint x="672.5" y="666.1" />
+              <mxPoint x="672.5" y="636.3" />
+              <mxPoint x="672.5" y="369.5" />
+              <mxPoint x="672.5" y="369.5" />
+              <mxPoint x="672.5" y="369.5" />
+              <mxPoint x="672.5" y="342.0" />
+              <mxPoint x="653.1" y="320.7" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e_11" value="" style="curved=1;html=1;rounded=0;strokeColor=#527398;strokeWidth=1.4;endArrow=block;endFill=1;fontFamily=Arial;fontSize=10;labelBackgroundColor=#ffffff;" edge="1" parent="1" source="n_8" target="n_11">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="240.1" y="878.9" />
+              <mxPoint x="235.9" y="926.3" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e_12" value="" style="curved=1;html=1;rounded=0;strokeColor=#527398;strokeWidth=1.4;endArrow=block;endFill=1;fontFamily=Arial;fontSize=10;labelBackgroundColor=#ffffff;" edge="1" parent="1" source="n_9" target="n_10">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="401.4" y="797.4" />
+              <mxPoint x="401.4" y="831.5" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e_13" value="" style="curved=1;html=1;rounded=0;strokeColor=#527398;strokeWidth=1.4;endArrow=block;endFill=1;fontFamily=Arial;fontSize=10;labelBackgroundColor=#ffffff;" edge="1" parent="1" source="n_10" target="n_11">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="324.6" y="940.9" />
+              <mxPoint x="286.4" y="961.1" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
