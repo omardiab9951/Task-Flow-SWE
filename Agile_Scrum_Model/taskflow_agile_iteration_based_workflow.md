@@ -93,15 +93,12 @@ Scrum defines three accountabilities within one Scrum Team: Product Owner, Scrum
 |**Accountability**|**Proposed**|**Possible contribution**|**Scrum responsibility**||
 |---|---|---|---|---|
 ||**owner**||||
-|Product Owner|Member 1|Lead Phase 1 requirements research in Sprint 0;<br>order the proposed Product Backlog.|Communicate the Product<br>manage Product Backlog ord|Goal and<br>ering.|
-|Scrum Master|Member 2|Lead Phase 2 architecture research in Sprint 0;|Help establish Scrum and|support|
-|||facilitate events and help address blockers.|team effectiveness.||
-|Developers|Members 3–<br>5|Lead Phase 3 database, Phase 4 backend, and Phase<br>5 frontend planning in Sprint 0; build and test in|Create the Sprint plan,<br>quality,<br>and<br>deliver|uphold<br>usable|
-|||development Sprints.|Increments.||
+|Product Owner and Scrum Master|Member 2|Led Phase 2 architecture research in Sprint 0; order the Product Backlog, write acceptance checks, facilitate the Scrum events, help address blockers, run the final manual test, and prepare the demo and documentation.|Communicate the Product Goal and manage Product Backlog ordering; help establish Scrum and support team effectiveness.||
+|Developers|Members 1, 3, 4, 5|Build and test in the development Sprints: Member 1 Full-Stack, Member 3 Database, Member 4 Backend, Member 5 Frontend. Sprint 0 phase leads stay as they were.|Create the Sprint plan, uphold quality, and deliver usable Increments.||
 
 
 
-The proposed member-to-phase mapping follows the companion Five Research Phases roadmap. All five members are expected to contribute during every development Sprint. The specific accountability assignments remain proposals until the team confirms them. 
+The proposed member-to-phase mapping follows the companion Five Research Phases roadmap. All five members are expected to contribute during every development Sprint. The specific accountability assignments remain proposals until the team confirms them. Because the team has five members, one member holds both the Product Owner and Scrum Master accountabilities. Development positions, file ownership, and the sprint-by-sprint split are in Development_Task_Division.md.
 
 ### **4 Scrum Artifacts with TaskFlow Examples** 
 
@@ -264,7 +261,10 @@ This is an example Sprint Backlog, not a committed assignment list. All items ar
 |Set up SQLite and Users table per<br>Phase 3 ERD.|Member 3|High|Proposed<br>aligned wi|user-data<br>table<br>th the agreed design.|Proposed, not started|
 |Plan/build register, login, logout, and<br>sessions, including CSRF protection and a 30-minute session expiry.|Member 4|High|Proposed<br>endpoints   l|authentication<br>and session flow.|Proposed, not started|
 |Create Login and Register pages per<br>Phase 5 plan.|Member 5|Medium|Proposed<br>authentica|user-facing<br>tion pages.|Proposed, not started|
-|Define<br>acceptance<br>checks<br>and<br>authentication tests.|Member 1|High|Proposed<br>and test<br>authentica|pass<br>conditions<br>cases for agreed<br>tion requirements.|Proposed, not started|
+|Define acceptance checks for authentication.|Member 2|High|Proposed pass conditions for the agreed authentication requirements.||Proposed, not started|
+|Set up pytest and write the authentication integration tests.|Member 1|High|Proposed test setup (temporary test database) and test cases for registration, login, and logout.||Proposed, not started|
+
+Owners follow Development_Task_Division.md; the Developers still plan the work during Sprint Planning.
 
 
 
