@@ -100,7 +100,7 @@ API contract agreement (whole team) → update any research phase if needed<br><
 
 Phases 3, 4, and 5 run in parallel after Phase 2, and the API contract is agreed after all five research phases are finished. 
 
-The team agrees the main API endpoints and the data fields each endpoint sends and receives after all five research phases are finished. Until then, endpoint ideas are only proposals. If the agreed contract requires changes to any research phase, that phase is updated and the change is recorded (see Section 7.1). The detailed API specification remains owned by Phase 4; see Section 7.2. 
+The team agrees the main API endpoints and the data fields each endpoint sends and receives after all five research phases are finished. Until then, endpoint ideas are only proposals. Draft: Research_phases\API_Contract\API_Contract_Agreement.md. If the agreed contract requires changes to any research phase, that phase is updated and the change is recorded (see Section 7.1). The detailed API specification remains owned by Phase 4; see Section 7.2. 
 
 #### **1.4 Sprint 0 timeline and deadlines** 
 

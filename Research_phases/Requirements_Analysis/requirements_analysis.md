@@ -101,17 +101,17 @@ TaskFlow Development Team
 
 - The required stack is HTML, CSS, JavaScript, Python 3 with Flask, and SQLite. 
 
-- Whether Flask builds full HTML pages or sends JSON to JavaScript is not decided yet. It will be decided in the Phase 2 architecture decision.
+- Flask renders the main pages with templates and provides a small set of JSON endpoints for dynamic actions (confirmed in the Phase 2 architecture decision).
 
 - Users are expected to have a modern browser and a connection to the application server. Each account has a unique email address. 
 
-- A deadline is a date plus an optional time. If no time is entered, the deadline is the end of that day (23:59). All deadlines use one fixed time zone, the team's local time zone, with no per-user time zones. A calendar library such as FullCalendar may be used, but no library is required by this SRS. 
+- A deadline is a date plus an optional time. If no time is entered, the deadline is the end of that day (23:59). All deadlines use one fixed time zone, Egypt local time (Africa/Cairo), with no per-user time zones. A calendar library such as FullCalendar may be used, but no library is required by this SRS. 
 
 - The three categories are fixed. SQLite is intended for the light, low-concurrency use of this academic project. 
 
 ### **4 Functional Requirements** 
 
-Priority meanings: **Must** is required for this version; **Should** is useful but secondary; **Could** is optional if time allows. The priorities below are retained from the original SRS. 
+Priority meanings: **Must** is required for this version; **Should** is useful but secondary; **Could** is optional if time allows. The priorities below are retained from the original SRS, except FR-32 (search), which was raised from Could to Must in Version 1.2. 
 
 #### **4.1 Authentication** 
 
@@ -357,8 +357,8 @@ The application has seven pages: Login, Register, Dashboard, All Tasks, Category
 
 #### **11.1 Simplification summary** 
 
-Compared with Version 1.0, this version removes repeated explanations, shortens requirement wording, groups requirements into readable tables, and condenses use-case and risk descriptions. It retains the original TaskFlow idea, all listed functional and non-functional requirements, the fixed categories, the technology stack, scope exclusions, and all Must/Should/Could priorities. No new features are introduced, and no implementation is claimed. 
+Compared with Version 1.0, this version removes repeated explanations, shortens requirement wording, groups requirements into readable tables, and condenses use-case and risk descriptions. It retains the original TaskFlow idea, the fixed categories, the technology stack, and the scope exclusions. Priorities are unchanged except FR-32 (search), now Must. Version 1.2 adds NFR-11 (CSRF) and NFR-12 (session expiry) and clarifies existing requirements. No new user-facing features are introduced, and no implementation is claimed. 
 
-Version 1.2: clarified deadline, dashboard, category count, search (now Must), account settings, CSRF, session expiry, and defaults. Page-delivery approach left to the architecture decision.
+Version 1.2: clarified deadline, dashboard, category count, search (now Must), account settings, CSRF, session expiry, and defaults. Page-delivery approach and time zone confirmed in the Phase 2 architecture decision.
 
 6 

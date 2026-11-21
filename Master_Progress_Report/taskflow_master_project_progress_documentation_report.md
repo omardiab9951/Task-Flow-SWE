@@ -109,12 +109,12 @@ Software Engineering Project Team
 #### **Open Decisions (to finish before Sprint 0 ends)**
 
 - [x] System architecture choice: Flask renders the main pages with templates, plus a small set of JSON endpoints for dynamic actions.
-- [ ] API contract (main endpoints and the data each one sends and receives)
+- [ ] API contract (main endpoints and the data each one sends and receives) — Draft prepared; waiting for team sign-off
 - [x] Deadline format (date plus optional time) and time zone: Egypt local time (Africa/Cairo, including daylight saving)
 - [ ] Dashboard rule when the user has fewer than three tasks, and whether overdue tasks count
 - [ ] Default priority and status when left empty
 - [ ] Session expiry time and CSRF protection
-- [ ] Search confirmed as a required feature (Must)
+- [x] Search confirmed as a required feature (Must)
 
 #### **3.1 Research and planning baseline (In Progress)** 
 
@@ -335,7 +335,7 @@ The initial information notes that final team decisions are still pending in Spr
 |Research reports and presentations|All five research assignments are In Progress (reports drafted, team decisions pending). Individual report files and actual delivery/meeting dates were<br>not supplied.|
 |Sprint 0 phase deadlines|Phase 1: 18 Nov 2026; Phase 2: 19 Nov 2026; Phases 3–5: 20 Nov 2026; API contract after all five phases (date to be set by the team). These are deadlines from<br>Five Research Phases; actual delivery evidence/dates are not supplied here.|
 |Phase 4 security and testing<br>additions|Added to planning on 18 Nov 2026; remain Planned and are not included in the drafted Phase 4 research scope.|
-|API contract agreement|Pending after all five research phases; date to be set by the team. Endpoint/data-field contents are not<br>supplied in this report.|
+|API contract agreement|Draft prepared; waiting for team sign-off. Endpoint/data-field contents are not<br>agreed in this report.|
 |Agreed research decisions|Team review and final decisions are pending. Reopening<br>concerns and final outcomes should be recorded if any arise.|
 |Suggested technology stack|HTML/CSS/JavaScript, Python Flask, and SQLite are suggested; formal approval is not specified.|
 |Implementation assignments|Not formally assigned in this report; any companion Scrum-plan allocation remains proposal-only unless confirmed.|

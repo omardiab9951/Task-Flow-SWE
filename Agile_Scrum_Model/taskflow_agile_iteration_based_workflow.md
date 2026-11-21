@@ -72,7 +72,7 @@ TaskFlow is a proposed web-based task management system for daily activities. It
 
 
 
-The technologies are suggestions, not confirmed team decisions. The team is expected to confirm or revise the stack during Sprint 0. No implementation, repository, or project-board setup is reported as completed. 
+The stack (HTML/CSS/JavaScript, Python Flask, SQLite) is confirmed. Flask renders the main pages and provides a small set of JSON endpoints for dynamic actions. No implementation, repository, or project-board setup is reported as completed. 
 
 ### **2 Agile Iteration-Based Mindset and Scrum Framework** 
 
@@ -132,7 +132,7 @@ The official timebox references below are maxima for a one-month Sprint: Sprint 
 
 
 
-The proposed durations are intended to fit a student team and a short project cadence. A Daily Scrum is for Developers to inspect progress toward the Sprint Goal and adapt the plan; the user-proposed meeting schedule should not turn it into a manager’s status report. Sprint Review is a working session to inspect outcomes and discuss what to do next. The Retrospective identifies improvements to team effectiveness. 1 
+The proposed durations are intended to fit a student team and a short project cadence. A Daily Scrum is for Developers to inspect progress toward the Sprint Goal and adapt the plan; the proposed meeting schedule should not turn it into a manager’s status report. Sprint Review is a working session to inspect outcomes and discuss what to do next. The Retrospective identifies improvements to team effectiveness. 1 
 
 ### **6 Five-Iteration Workflow and Calendar** 
 
@@ -215,7 +215,7 @@ Each phase report is planned to be about 2–3 pages. The assigned member resear
 
 #### **7.2 Sprint 1 — 21–27 November 2026** 
 
-**Proposed goal:** project setup and user authentication. This begins after Sprint 0 ends with all five research phases completed and the team API contract agreed. The proposed work includes a GitHub repository; Flask project structure; SQLite Users table; register, login, logout, and session handling; Login and Register pages; and authentication checks/tests. Proposed responsibility examples appear in Section 9. These are targets, not completed tasks. 1 
+**Proposed goal:** project setup and user authentication. This begins after Sprint 0 ends with all five research phases completed and the team API contract agreed. The proposed work includes a GitHub repository; Flask project structure; SQLite Users table; register, login, logout, and session handling, including CSRF protection and a 30-minute session expiry; Login and Register pages; and authentication checks/tests. Proposed responsibility examples appear in Section 9. These are targets, not completed tasks. 1 
 
 **Proposed Increment target:** a usable registration and login flow integrated across the planned frontend, Flask backend, and SQLite data layer, subject to the Definition of Done. 
 
@@ -262,7 +262,7 @@ This is an example Sprint Backlog, not a committed assignment list. All items ar
 |Create GitHub repository.|Member 2|High|Proposed<br>repository|shared<br>source<br>for the project.|Proposed, not started|
 |Set up Flask project structure per<br>Phase 4 plan.|Member 4|High|Proposed<br>ready for p|backend skeleton<br>lanned features.|Proposed, not started|
 |Set up SQLite and Users table per<br>Phase 3 ERD.|Member 3|High|Proposed<br>aligned wi|user-data<br>table<br>th the agreed design.|Proposed, not started|
-|Plan/build register, login, logout, and<br>sessions.|Member 4|High|Proposed<br>endpoints   l|authentication<br>and session flow.|Proposed, not started|
+|Plan/build register, login, logout, and<br>sessions, including CSRF protection and a 30-minute session expiry.|Member 4|High|Proposed<br>endpoints   l|authentication<br>and session flow.|Proposed, not started|
 |Create Login and Register pages per<br>Phase 5 plan.|Member 5|Medium|Proposed<br>authentica|user-facing<br>tion pages.|Proposed, not started|
 |Define<br>acceptance<br>checks<br>and<br>authentication tests.|Member 1|High|Proposed<br>and test<br>authentica|pass<br>conditions<br>cases for agreed<br>tion requirements.|Proposed, not started|
 
@@ -272,7 +272,7 @@ TaskFlow: Agile Iteration-Based Workflow (Proposed Plan) | Page 8 of 10
 
 ### **10 Team Collaboration** 
 
-The team proposes using GitHub for shared source work and GitHub Projects as a Kanban board. Members should work in branches, make small commits, open pull requests, review code, and integrate early. The API contract agreed at the end of Sprint 0 is the shared basis for how the frontend and backend exchange data. 
+The team proposes using GitHub for shared source work and GitHub Projects as a Kanban board. Members should work in branches, make small commits, open pull requests, review code, and integrate early. The API contract agreed at the end of Sprint 0 is the shared basis for how the frontend and backend exchange data. The draft is in Research_phases\API_Contract\API_Contract_Agreement.md. 
 
 One member may be identified as responsible for coordinating a task, while others pair or review. The Daily Scrum is for Developers to inspect progress toward the Sprint Goal and adapt the near-term plan; it should not become a manager’s status-report meeting. Test a feature against its agreed pass conditions before calling it Done. Never describe intended functionality as already completed. 1 
 
