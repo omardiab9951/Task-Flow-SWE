@@ -108,9 +108,9 @@ Software Engineering Project Team
 
 #### **Open Decisions (to finish before Sprint 0 ends)**
 
-- [ ] System architecture choice (Flask builds full pages vs. Flask sends JSON and JavaScript builds the pages)
+- [x] System architecture choice: Flask renders the main pages with templates, plus a small set of JSON endpoints for dynamic actions.
 - [ ] API contract (main endpoints and the data each one sends and receives)
-- [ ] Deadline format (date only, or date and time) and time zone
+- [x] Deadline format (date plus optional time) and time zone: Egypt local time (Africa/Cairo, including daylight saving)
 - [ ] Dashboard rule when the user has fewer than three tasks, and whether overdue tasks count
 - [ ] Default priority and status when left empty
 - [ ] Session expiry time and CSRF protection
