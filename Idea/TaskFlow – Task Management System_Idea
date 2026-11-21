@@ -1,0 +1,131 @@
+# TaskFlow – Task Management System 
+
+## Project Overview 
+
+TaskFlow is a web-based task management application designed to help users organize their daily activities, manage deadlines, and track their progress in one place. 
+
+Users can create and manage tasks, assign priorities, set deadlines, and organize their tasks into categories such as Study, Personal, and Work. 
+
+## Main Features 
+
+### 1. User Authentication 
+
+- Register a new account. 
+
+- Login and logout. 
+
+- Each user has their own private tasks. 
+
+### 2. Main Dashboard 
+
+The dashboard provides a quick overview of the user’s tasks and activities. It includes: 
+
+- The three nearest upcoming incomplete tasks, sorted by deadline. 
+
+- Three category cards: Study, Personal, and Work. 
+
+- Each category card displays the number of tasks and opens its corresponding task list when clicked. 
+
+- An Add New Task button for quickly creating tasks. 
+
+- A Show All Tasks button to view all tasks. 
+
+### 3. Task Management 
+
+Users can: 
+
+- Create new tasks. 
+
+- View all their tasks. 
+
+- Edit existing tasks. 
+
+- Delete tasks. 
+
+- Mark tasks as completed. 
+
+- Set task deadlines. 
+
+- Assign priorities: Low, Medium, and High. 
+
+- Set task status: Pending, In Progress, and Completed. 
+
+Marking a task as completed sets its status to Completed. Completed status and 'completed' are the same thing, not two separate fields.
+
+Each task contains a title, description, category, priority, status, deadline, and creation date. 
+
+### 4. Categories 
+
+Tasks are organized into three main categories: 
+
+The three categories (Study, Personal, Work) are fixed and the same for all users. Users cannot create their own categories.
+
+   - Study: Assignments, exams, lectures, and university activities. 
+
+- Personal: Personal activities, errands, and daily responsibilities. 
+
+- • Work: Job-related tasks and professional activities. 
+
+- Clicking a category displays only the tasks belonging to it. 
+
+### 5. Search, Filtering, and Sorting 
+
+- Filter tasks by priority. 
+
+- Filter tasks by status. 
+
+- Filter tasks by category. 
+
+- Sort tasks by deadline (earliest or latest). 
+
+- Search tasks by a keyword in the title (optional feature).
+
+### 6. Calendar View 
+
+- Display tasks according to their deadlines. 
+
+- Navigate between months. 
+
+- Select a date to view its scheduled tasks. 
+
+- Open task details from the calendar. 
+
+### 7. Profile 
+
+- View and update personal information. 
+
+- Edit name and email (email must stay unique). 
+
+- Change password. 
+
+## Main Application Pages 
+
+1. Login 2. Register 3. Dashboard 4. All Tasks 5. Category Tasks 6. Calendar 7. Profile 
+
+Task creation and editing will be handled through reusable forms or pop-up windows (modals). 
+
+## Suggested Technologies 
+
+Python Flask + SQLite 
+
+- Frontend: HTML, CSS, JavaScript 
+
+- Backend: Python Flask 
+
+- • Database: SQLite 
+
+#### Why this stack: 
+
+- Lightweight Python backend. 
+
+- • Very little configuration. 
+
+- SQLite doesn’t require a separate database server. 
+
+- Good if you prefer Python. 
+
+## Project Objective 
+
+The main objective is to provide a simple, organized, and user-friendly platform that helps individuals manage their responsibilities, prioritize tasks, meet deadlines, and monitor their productivity. 
+
+The project will demonstrate important Software Engineering concepts, including requirements analysis, system design, database management, user authentication, CRUD operations, and software testing. 
