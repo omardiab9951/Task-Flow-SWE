@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  {# CSRF token: api.js reads it from here and sends it as the X-CSRFToken header #}
+  <meta name="csrf-token" content="{{ csrf_token() }}">
+
+  {# Child pages set their own title, for example: Log in | TaskFlow #}
+  <title>{% block title %}TaskFlow{% endblock %}</title>
+
+  {# Inter font; the CSS has a sans-serif fallback if it cannot load #}
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap">
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+
+  {# Optional extra tags in the head (for example a page-specific stylesheet) #}
+  {% block head_extra %}{% endblock %}
+</head>
+
+{# Child pages can add a class to the body (Login and Register use "auth-page") #}
+<body class="{% block body_class %}{% endblock %}">
+
+  {# One nav link. "active" highlights the current tab in indigo. #}
+  {% macro nav_link(href, label, active) -%}
+    <a class="nav-link{% if active %} active{% endif %}" href="{{ href }}"{% if active %} aria-current="page"{% endif %}>{{ label }}</a>
+  {%- endmacro %}
+
+  {# ---------- Top navigation bar: only for logged-in users ---------- #}
+  {% if session.get('user_id') %}
+  {% set path = request.path %}
+  <header class="topbar">
+    <div class="topbar-inner">
+      <a class="brand" href="/dashboard">TaskFlow</a>
+
+      {# Menu button (mobile only, see style.css) #}
+      <button type="button" class="nav-toggle" id="nav-toggle"
+              aria-label="Toggle menu" aria-expanded="false" aria-controls="main-nav">&#9776;</button>
+
+      <nav class="main-nav" id="main-nav" aria-label="Main">
+        {# Category Tasks opens from the Dashboard cards, so Dashboard stays active there #}
+        {{ nav_link('/dashboard', 'Dashboard', path.startswith('/dashboard') or path.startswith('/category')) }}
+        {{ nav_link('/tasks', 'All Tasks', path.startswith('/tasks')) }}
+        {{ nav_link('/calendar', 'Calendar', path.startswith('/calendar')) }}
+        {{ nav_link('/profile', 'Profile', path.startswith('/profile')) }}
+
+        {# Logout changes state, so it is a POST form with a CSRF token, not a link #}
+        <form class="logout-form" method="POST" action="/logout">
+          <input type="hidden" name="csrf_token" value="{{ csrf_token() }}">
+          <button type="submit" class="btn btn-secondary btn-sm">Logout</button>
+        </form>
+      </nav>
+    </div>
+  </header>
+  {% endif %}
+
+  <main class="page" id="main">
+
+    {# ---------- Flashed messages from the backend (if any) ---------- #}
+    {% with messages = get_flashed_messages(with_categories=true) %}
+      {% if messages %}
+      <div class="flash-area">
+        {% for category, message in messages %}
+          <div class="alert alert-{{ category if category in ['error', 'success'] else 'info' }}" role="alert">{{ message }}</div>
+        {% endfor %}
+      </div>
+      {% endif %}
+    {% endwith %}
+
+    {# ---------- Page content ---------- #}
+    {% block content %}{% endblock %}
+  </main>
+
+  {# Page scripts (later: api.js, tasks.js, calendar.js) #}
+  {% block scripts %}{% endblock %}
+
+  {# Mobile menu: the button shows or hides the navigation links #}
+  {% if session.get('user_id') %}
+  <script>
+    (function () {
+      var button = document.getElementById('nav-toggle');
+      var nav = document.getElementById('main-nav');
+      if (!button || !nav) { return; }
+      button.addEventListener('click', function () {
+        var isOpen = nav.classList.toggle('open');
+        button.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
+      });
+    })();
+  </script>
+  {% endif %}
+</body>
+</html>

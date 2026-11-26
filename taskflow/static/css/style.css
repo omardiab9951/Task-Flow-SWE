@@ -1,0 +1,306 @@
+/* ==========================================================================
+   TaskFlow - style.css  (owner: Frontend, Member 5)
+   "Fresh Indigo" style from the Phase 5 Frontend plan (Sections 3 and 4).
+
+   Shared class names other members can use:
+     Layout   : .page, .card, .alert (.alert-error / .alert-success / .alert-info)
+     Buttons  : .btn  .btn-primary  .btn-secondary  .btn-sm  .btn-block
+     Forms    : .form-group  .field-error  .form-hint  (inputs: input, select, textarea)
+     Badges   : .badge-priority (.priority-high / .priority-medium / .priority-low)
+                .badge-status   (outlined; text says Pending / In Progress / Completed)
+     Category : .category-icon (.category-study / .category-personal / .category-work)
+   ========================================================================== */
+
+
+/* ---------- 1. Color tokens (Plan Section 3) ---------- */
+:root {
+  /* Core palette */
+  --bg: #F8F9FF;            /* page background */
+  --surface: #FFFFFF;       /* cards, forms, top bar */
+  --text: #1E1B4B;          /* headings and main text */
+  --text-muted: #64748B;    /* secondary text (never lighter than this) */
+  --primary: #4F46E5;       /* buttons, links, active tab */
+  --tint: #EEF2FF;          /* hover and selected fill */
+  --border: #E5E7EB;        /* borders and dividers */
+
+  /* Category colors (icons only) */
+  --cat-study: #0D9488;
+  --cat-personal: #0284C7;
+  --cat-work: #475569;
+
+  /* Priority colors (priority badges only) */
+  --prio-high-text: #BE123C;   --prio-high-fill: #FFE4E6;
+  --prio-med-text: #B45309;    --prio-med-fill: #FEF3C7;
+  --prio-low-text: #047857;    --prio-low-fill: #D1FAE5;
+
+  /* Shape and shadow (Plan Section 4) */
+  --radius: 12px;
+  --shadow: 0 2px 8px rgba(30, 27, 75, 0.08);
+}
+
+
+/* ---------- 2. Base ---------- */
+*, *::before, *::after { box-sizing: border-box; }
+
+html { -webkit-text-size-adjust: 100%; }
+
+body {
+  margin: 0;
+  font-family: "Inter", sans-serif;   /* Inter with a sans-serif fallback */
+  font-size: 16px;
+  line-height: 1.5;
+  color: var(--text);
+  background: var(--bg);
+}
+
+h1, h2, h3 { margin: 0 0 8px; line-height: 1.25; color: var(--text); }
+h1 { font-size: 1.75rem; font-weight: 700; }
+h2 { font-size: 1.25rem; font-weight: 600; }
+p  { margin: 0 0 12px; }
+
+a { color: var(--primary); }
+a:hover { text-decoration: none; }
+
+/* Visible keyboard focus on every interactive element */
+a:focus-visible,
+button:focus-visible,
+input:focus-visible,
+select:focus-visible,
+textarea:focus-visible {
+  outline: 2px solid var(--primary);
+  outline-offset: 2px;
+}
+
+
+/* ---------- 3. Page layout ---------- */
+.page {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 24px 16px;
+}
+
+.card {
+  background: var(--surface);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  padding: 24px;
+}
+
+
+/* ---------- 4. Buttons ---------- */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 44px;                  /* large enough to tap */
+  padding: 0 20px;
+  border-radius: 8px;
+  border: 1px solid transparent;
+  font-family: inherit;
+  font-size: 1rem;
+  font-weight: 600;
+  line-height: 1;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.btn-primary {                       /* solid indigo, white text */
+  background: var(--primary);
+  color: #FFFFFF;
+}
+.btn-primary:hover { filter: brightness(0.92); }
+
+.btn-secondary {                     /* outlined */
+  background: var(--surface);
+  color: var(--primary);
+  border-color: var(--primary);
+}
+.btn-secondary:hover { background: var(--tint); }
+
+.btn-sm { min-height: 40px; padding: 0 16px; font-size: 0.9rem; }
+.btn-block { display: flex; width: 100%; }
+
+
+/* ---------- 5. Forms ---------- */
+.form-group { margin-bottom: 16px; }
+
+label {
+  display: block;
+  margin-bottom: 6px;
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: var(--text);
+}
+
+input, select, textarea {
+  display: block;
+  width: 100%;
+  min-height: 44px;
+  padding: 10px 12px;
+  font-family: inherit;
+  font-size: 1rem;                   /* 16px stops zoom on iOS */
+  color: var(--text);
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+}
+input:hover, select:hover, textarea:hover { background: var(--tint); }
+input:focus, select:focus, textarea:focus { background: var(--surface); border-color: var(--primary); }
+
+/* Field that failed validation (set aria-invalid="true" on the input) */
+input[aria-invalid="true"], select[aria-invalid="true"], textarea[aria-invalid="true"] {
+  border-color: var(--prio-high-text);
+}
+
+.form-hint { margin: 6px 0 0; font-size: 0.85rem; color: var(--text-muted); }
+.field-error { margin: 6px 0 0; font-size: 0.85rem; font-weight: 500; color: var(--prio-high-text); }
+
+
+/* ---------- 6. Alerts (messages above a form or page) ---------- */
+/* The plan defines no error color, so errors reuse the rose pair. The message text always says what went wrong. */
+.alert {
+  margin-bottom: 16px;
+  padding: 12px 14px;
+  border-radius: 8px;
+  font-size: 0.95rem;
+  border: 1px solid transparent;
+}
+.alert-error   { color: var(--prio-high-text); background: var(--prio-high-fill); border-color: var(--prio-high-text); }
+.alert-success { color: var(--prio-low-text);  background: var(--prio-low-fill);  border-color: var(--prio-low-text); }
+.alert-info    { color: var(--text);           background: var(--tint);            border-color: var(--primary); }
+
+
+/* ---------- 7. Badges and category icons (used from Sprint 2) ---------- */
+.badge-priority,
+.badge-status {
+  display: inline-block;
+  padding: 2px 10px;
+  border-radius: 999px;
+  font-size: 0.8rem;
+  font-weight: 600;
+  line-height: 1.5;
+  white-space: nowrap;
+}
+
+/* Priority: filled soft pill */
+.priority-high   { color: var(--prio-high-text); background: var(--prio-high-fill); }
+.priority-medium { color: var(--prio-med-text);  background: var(--prio-med-fill); }
+.priority-low    { color: var(--prio-low-text);  background: var(--prio-low-fill); }
+
+/* Status: small outlined badge, so it is not confused with the filled priority pill */
+.badge-status {
+  color: var(--text-muted);
+  background: transparent;
+  border: 1px solid var(--text-muted);
+}
+
+/* Category icon tile: color is applied to the icon only */
+.category-study    { color: var(--cat-study); }
+.category-personal { color: var(--cat-personal); }
+.category-work     { color: var(--cat-work); }
+
+
+/* ---------- 8. Top navigation bar (private pages) ---------- */
+.topbar {
+  background: var(--surface);
+  border-bottom: 1px solid var(--border);
+}
+
+.topbar-inner {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 8px 24px;
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 10px 16px;
+}
+
+.brand {
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: var(--primary);
+  text-decoration: none;
+}
+
+.main-nav {
+  display: flex;
+  flex: 1;
+  align-items: center;
+  gap: 4px;
+}
+
+.nav-link {
+  display: inline-flex;
+  align-items: center;
+  min-height: 40px;
+  padding: 0 14px;
+  border-radius: 8px;
+  font-weight: 500;
+  color: var(--text);
+  text-decoration: none;
+}
+.nav-link:hover { background: var(--tint); }
+.nav-link.active { color: var(--primary); background: var(--tint); font-weight: 600; }
+
+.logout-form { margin: 0 0 0 auto; }   /* pushes Logout to the right on desktop */
+
+.nav-toggle {                          /* menu button, shown on mobile only */
+  display: none;
+  margin-left: auto;
+  min-height: 44px;
+  min-width: 44px;
+  padding: 0 12px;
+  font-size: 1.25rem;
+  line-height: 1;
+  color: var(--text);
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  cursor: pointer;
+}
+.nav-toggle:hover { background: var(--tint); }
+
+
+/* ---------- 9. Login and Register pages ---------- */
+.auth-page .page {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  max-width: none;
+}
+
+.auth-page .flash-area,
+.auth-card {
+  width: 100%;
+  max-width: 420px;
+}
+
+.auth-card { padding: 32px 28px; }
+.auth-brand { margin-bottom: 16px; font-size: 1.25rem; font-weight: 700; color: var(--primary); }
+.auth-sub { color: var(--text-muted); }
+.auth-switch { margin: 20px 0 0; font-size: 0.95rem; text-align: center; color: var(--text-muted); }
+
+
+/* ---------- 10. Responsive (Plan Section 8) ---------- */
+@media (max-width: 768px) {
+  .nav-toggle { display: inline-flex; align-items: center; justify-content: center; }
+
+  /* Menu collapses into one button; JS in base.html adds .open */
+  .main-nav {
+    display: none;
+    flex-basis: 100%;
+    flex-direction: column;
+    align-items: stretch;
+    padding-bottom: 8px;
+  }
+  .main-nav.open { display: flex; }
+  .nav-link { min-height: 44px; }
+  .logout-form { margin: 8px 0 0; }
+  .logout-form .btn { width: 100%; }
+
+  .card { padding: 20px 16px; }
+  .auth-card { padding: 24px 18px; }
+}
