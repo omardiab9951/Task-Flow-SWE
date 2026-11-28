@@ -1,0 +1,19 @@
+# SQLite Database
+taskflow.db
+
+# Python Cache
+__pycache__/
+*.pyc
+
+# Virtual Environment
+venv/
+.venv/
+
+# Environment Variables
+.env
+
+# macOS
+.DS_Store
+
+# Unnecessary image
+images.jfif
